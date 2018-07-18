@@ -1,16 +1,16 @@
 # AR Kit Image Recognition Demo
 
 ## Intro 
-This repository contains a simple ARkit demo that detects images and places videos and 3D Objects. To create this demo i used and modifed a project made Jayven N. from AppCoda (https://appcoda.com/arkit-image-recognition/). Check out his post about image recognition since it's the base of this demo. 
+This repository contains a simple ARkit demo that detects images and places videos and 3D Objects. To create this demo I used and modifed a project made by Jayven N. from AppCoda (https://appcoda.com/arkit-image-recognition/). Check out his post about image recognition since it's the base of this demo. 
 Feel free to use this example to create some new awsome apps :) 
 
 
 
 ## Detect images
-To detect images I created 2 markers, all markers should be named and stored in the `AR Resources` folder inside the `Assets.xcassets`, every marker will be associated to a different `SceneKit Node` Object. 
+To detect images I created 2 markers. All markers should be named and stored in the `AR Resources` folder inside the `Assets.xcassets`, every marker will be associated to a different `SceneKit Node` Object. 
 
 ## Create a video Node
-To make a video display as a AR object i created a `tvPlaneNode` where I applied a texture.
+To make a video display as a AR object I created a `tvPlaneNode` where I applied a texture.
 
 `````swift
     lazy var videoNode: SCNNode = {

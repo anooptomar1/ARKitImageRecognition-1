@@ -87,7 +87,6 @@ extension ViewController: ARSCNViewDelegate {
                 
                 node.addChildNode(overlayNode)
             }
-            self.label.text = "\(imageName)"
         }
     }
     

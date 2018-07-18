@@ -1,1 +1,1 @@
-# ARKitImageRecognition
+# AR Kit Image Recognition Demo

@@ -128,7 +128,6 @@ extension ViewController: ARSCNViewDelegate {
             guard let imageAnchor = anchor as? ARImageAnchor,
                 let imageName = imageAnchor.referenceImage.name else { return }
             
-            // TODO: Comment out code
             if (imageName == "video"){
                 let planeNode = self.videoNode
                 planeNode.opacity = 0.0
@@ -138,46 +137,15 @@ extension ViewController: ARSCNViewDelegate {
             }
             
             if(imageName == "ship"){
-                let overlayNode = self.getNode(withImageName: imageName)
+                let overlayNode = self.shipNode
                 overlayNode.opacity = 0
                 overlayNode.position.y = 0.2
                 overlayNode.runAction(self.spinAction)
                 
                 node.addChildNode(overlayNode)
             }
-
-            /*
-            // TODO: Overlay 3D Object
-            let overlayNode = self.getNode(withImageName: imageName)
-            overlayNode.opacity = 0
-            overlayNode.position.y = 0.2
-            overlayNode.runAction(self.spinAction)
-            
-            node.addChildNode(overlayNode)
-            
-            */
             self.label.text = "\(imageName)"
         }
-    }
-    
-    func getPlaneNode(withReferenceImage image: ARReferenceImage) -> SCNNode {
-        let plane = SCNPlane(width: image.physicalSize.width,
-                             height: image.physicalSize.height)
-        let node = SCNNode(geometry: plane)
-        return node
-    }
-    
-    func getNode(withImageName name: String) -> SCNNode {
-        var node = SCNNode()
-        switch name {
-        case "ship":
-            node = shipNode
-        case "video":
-            node = videoNode
-        default:
-            break
-        }
-        return node
     }
     
 }
